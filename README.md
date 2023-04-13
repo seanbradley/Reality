@@ -22,6 +22,8 @@ The following categorical groupings of philosophical / scientific / religious pa
 
 The major paradigms within each of the categories were plotted om three dimensions, the above categories being one dimension (X axis), date of emergence (Y axis) being another, and, finally, also the relative degree of consensus around the idea (if such a thing can be ascertained)--via, for example, the number of citations in scientific or religious texts within the topic's respective scientific or religious community (Z axis). (NOTE: ChatGPT 4.0 offered the metric of consensus--re-labeled as "whackiness" in the scatterplot--with a solid disclaimer.)
 
+![Models of Reality -- 10,000 BC to 2030 AD](reality_scatterplot.jpg)
+
 In the case of projected Future Developments (or Future Models), I arbitrarily assigned a global consensus value of 13 (roughly in the middle). ChatGPT 4.0 conjectured the emergence of Artificial General Intelligence sometime between 2030 and 2050. Hence, I also arbitrarily gave all of its forward-looking projections a date of 2030. 
 
 The plotted data:
