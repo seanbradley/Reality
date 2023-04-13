@@ -2,7 +2,7 @@
 
 This repo contains a scatterplot and findings that summarize the key takeaways from a conversation I had with ChatGPT 4.0 in mid-April 2023 about the historical and projected nature of major models or maps of human reality and/or consciousness.
 
-## CATEGORIES
+## MODEL CATEGORIES / PARADIGMS OF THOUGHT
 
 The following categorical groupings of philosophical / scientific / religious paradigms were discussed.
 
@@ -67,11 +67,11 @@ In the case of projected Future Developments (or Future Models), I arbitrarily a
 
 The topic, again, is "models and maps of reality and/or consciousness".
 
-### ASSUMPTIONS / CAVEATS
+#### ASSUMPTIONS / CAVEATS
 
 The terms here are very loosely defined--conflating and sometimes confusing scope of concern. Whether or not reality and consciousness are capable of being parsed one from another or are, in fact, one and the same thing is a matter of debate. And, also, whether or not scientific consensus and lived human experience are reconcilable is another matter of debate. This inventory of paradigms or Weltanschauungen is perhaps not as exhauastive as it ought to be, and, certainly, it is prejudicially limited by the underlying data set upon which ChatGPT 4.0 was trained and/or natively available on the internet. Even so, with the broadest possible wave of a hand, it provides some interesting outcomes.
 
-### VELOCITY OF NEW IDEAS
+#### VELOCITY OF NEW IDEAS
 
 Perhaps most obvious: the frequency of emergence with regard to new ideas intensifies--i.e., new ideas spawn more rapidly--as history progresses. At least that is, perhaps, what one might glean examining the scatterplot. Albeit: this is possibly more a function of the emergence of the internet, and publication and proliferation of ideas recorded therein. Given the raw data upon which ChatGPT's reasonining is founded, tough to know whether we have an equally granular understanding of the emergence of ideas, say, before the Gutenberg Press. It stands to reason, however, without the exponentially powerful tools for information dissemination with which we are blessed today, that ideas circulated around the globe more glacially--i..e, no more rapidly than either human migration...or the spontaneous and parallel emergence of like-minded ideas among people separated by time and space due to similar anthropological catalysts. (David Graeber and David Wengrow's book, The Dawn of Everything, provides some fascinating background and hypotheses on that topic.)
 
@@ -112,6 +112,6 @@ To this point about the increasing speed with which new ideas about reality emer
   * Last appearance: TBD
   * Delta: N/A
 
-### TRENDING TOWARD ABSTRACTION / DENSER PACKING OF INFORMATION
+#### TRENDING TOWARD ABSTRACTION / DENSER PACKING OF INFORMATION
 
 Also seemingly elucidated via models and maps dated and stack ranked: mankind's proclivity seems to be toward ever more and more secular ideas. Or, even more starkly, the organizing precepts within each model or map become ever more algorithmic and, eventually, completely abstract yet radically dense in nature...insomuch as, say, a geometric / graphical representation of reality (like a Hopf Fibration or E8 lattice or Wolfram Ruliad) is entirely independent of the sort of language that would have driven the ancient cosmological models communicated via the verbal traditions of antiquity. These geometric / graphical models align with Einstein's stated mode of ideation: "I hardly think in words anymore." Ironically, I draw these conclusions through conversation with a Large Language Model...which, also ironically, dismissed itself from the list.
