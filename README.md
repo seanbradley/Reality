@@ -71,40 +71,40 @@ Perhaps most obvious: the frequency of emergence with regard to new ideas intens
 
 To this point about the increasing speed with which new ideas about reality emerge, if we reduce the model categories a bit further, and calculate the delta in time with regard to the first emergence of each and the reign of their proliferation, we get something revealing increasingly plurality and compression of new ideation:
 
-Ancient Cosmologies and Mythologies:
-First appearance: Animism (Prehistoric)
-Last appearance: Abrahamic Religions (~2000 BCE to 7th century CE)
-Delta: ~several millennia (exact value difficult to determine)
+* Ancient Cosmologies and Mythologies:
+  * First appearance: Animism (Prehistoric)
+  * Last appearance: Abrahamic Religions (~2000 BCE to 7th century CE)
+  * Delta: ~several millennia (exact value difficult to determine)
 
-Geocentric and Heliocentric Models:
-First appearance: Geocentric Model (~6th century BCE)
-Last appearance: Heliocentric Model (1543)
-Delta: ~2100 years
+* Geocentric and Heliocentric Models:
+  * First appearance: Geocentric Model (~6th century BCE)
+  * Last appearance: Heliocentric Model (1543)
+  * Delta: ~2100 years
 
-Theories of Consciousness and Perception:
-First appearance: Cartesian Dualism (1641)
-Last appearance: Integrated Information Theory (IIT) (2004)
-Delta: 363 years
+* Theories of Consciousness and Perception:
+  * First appearance: Cartesian Dualism (1641)
+  * Last appearance: Integrated Information Theory (IIT) (2004)
+  * Delta: 363 years
 
-Classical and Modern Physics:
-First appearance: Newtonian Physics (1687)
-Last appearance: Quantum Mechanics (1925)
-Delta: 238 years
+* Classical and Modern Physics:
+  * First appearance: Newtonian Physics (1687)
+  * Last appearance: Quantum Mechanics (1925)
+  * Delta: 238 years
 
-Computational Models:
-First appearance: Cellular Automata (1948)
-Last appearance: Ruliad (2020)
-Delta: 72 years
+* Computational Models:
+  * First appearance: Cellular Automata (1948)
+  * Last appearance: Ruliad (2020)
+  * Delta: 72 years
 
-Unification Theories and Geometric Models:
-First appearance: String Theory (1968)
-Last appearance: Cosmological Polytope (2013)
-Delta: 45 years
+* Unification Theories and Geometric Models:
+  * First appearance: String Theory (1968)
+  * Last appearance: Cosmological Polytope (2013)
+  * Delta: 45 years
 
-Future Developments:
-First appearance: 2030 (assumed)
-Last appearance: TBD
-Delta: N/A
+* Future Developments:
+  * First appearance: 2030 (assumed)
+  * Last appearance: TBD
+  * Delta: N/A
 
 
 Also seemingly elucidated via models and maps dated and stack ranked: mankind's proclivity seems to be toward ever more and more secular ideas. Or, even more starkly, the organizing precepts within each model or map become ever more algorithmic and, eventually, completely abstract yet radically dense in nature...insomuch as, say, a geometric / graphical representation of reality (like a Hopf Fibration or E8 lattice or Wolfram Ruliad) is entirely independent of the sort of language that would have driven the ancient cosmological models communicated via the verbal traditions of antiquity. These geometric / graphical models align with Einstein's stated mode of ideation: "I hardly think in words anymore." Ironically, I draw these conclusions through conversation with a Large Language Model...which, also ironically, dismissed itself from the list.
