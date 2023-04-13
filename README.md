@@ -1,10 +1,12 @@
 # MODELS OF REALITY -- 10,000 BC TO 2030 AD
 
-This repo contains a scatterplot and findings that summarize the key takeaways from a conversation I had with ChatGPT 4.0 in mid-April 2023 about the historical and projected nature of major models or maps of human reality and/or consciousness.
+This repo contains a summary scatterplot and findings--i.e., the key takeaways--from a conversation I had with ChatGPT 4.0 in mid-April 2023 about the historical and projected nature of major models or maps of human reality and/or consciousness.
 
-## MODEL CATEGORIES / PARADIGMS OF THOUGHT
+The goal of the conversation was to create a "map of maps"--a historical and possibly strategically useful view to how mankind tries to make sense of the universe or, more broadly, everything. I synonymously refer to these maps as models or paradigms or Weltanschauungen.
 
-The following categorical groupings of philosophical / scientific / religious paradigms were discussed.
+## MODEL CATEGORIES
+
+The following categorical groupings of philosophical / scientific / religious paradigms were discussed with the AI.
 
 * Classical Physics (e.g., Newton)
 * Heliocentric Models (e.g, Copernicus)
@@ -22,7 +24,7 @@ The following categorical groupings of philosophical / scientific / religious pa
 * Disproven Models (e.g., Flat Earth)
 * Future Models (e.g., Quantum Gravity)
 
-The major paradigms within each of the categories were plotted om three dimensions, the above categories being one dimension (X axis), date of emergence (Y axis) being another, and, finally, also the relative degree of consensus around the idea (if such a thing can be ascertained)--via, for example, the number of citations in scientific or religious texts within the topic's respective scientific or religious community (Z axis). (NOTE: ChatGPT 4.0 offered the metric of consensus--re-labeled as "whackiness" in the scatterplot--with a solid disclaimer.)
+The major paradigms within each of the categories were plotted in three dimensions, the above categories being one dimension (X axis), date of the paradigm's emergence (Y axis) being another, and, finally, also the relative degree of consensus around the idea (if such a thing can be ascertained)--via, for example, the number of citations in scientific or religious texts within the topic's respective scientific or religious community (Z axis). (NOTE: ChatGPT 4.0 offered the metric of consensus--re-labeled as "whackiness" in the scatterplot--with a solid disclaimer.)
 
 ![Models of Reality -- 10,000 BC to 2030 AD](reality_scatterplot.jpg)
 
@@ -67,9 +69,11 @@ In the case of projected Future Developments (or Future Models), I arbitrarily a
 
 The topic, again, is "models and maps of reality and/or consciousness".
 
-#### ASSUMPTIONS / CAVEATS
+#### ASSUMPTIONS / CAVEATS / DISCLAIMERS
 
-The terms here are very loosely defined--conflating and sometimes confusing scope of concern. Whether or not reality and consciousness are capable of being parsed one from another or are, in fact, one and the same thing is a matter of debate. And, also, whether or not scientific consensus and lived human experience are reconcilable is another matter of debate. This inventory of paradigms or Weltanschauungen is perhaps not as exhauastive as it ought to be, and, certainly, it is prejudicially limited by the underlying data set upon which ChatGPT 4.0 was trained and/or natively available on the internet. Even so, with the broadest possible wave of a hand, it provides some interesting outcomes.
+"The map is not the territory." -- Gregory Bateson
+
+The terms here are very loosely defined--conflating and sometimes confusing scope of concern. Whether or not reality and consciousness are capable of being parsed one from another or are, in fact, one and the same thing is a matter of debate. And, also, whether or not scientific consensus and lived human experience are reconcilable is another matter of debate. This inventory of paradigms or Weltanschauungen is perhaps not as exhauastive as it ought to be, and, certainly, it is prejudicially limited by the underlying data set upon which ChatGPT 4.0 was trained and/or natively available on the internet. Even so, with the broadest possible wave of a hand, it provides some interesting outcomes. 
 
 #### VELOCITY OF NEW IDEAS
 
