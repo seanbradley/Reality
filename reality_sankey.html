@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sankey Diagram</title>
+  <script src="C:/Users/sean/OneDrive/Documents/d3-vs-min.js"></script>
+  <script src="C:/Users/sean/OneDrive/Documents/d3-sankey.js"></script>  
+  <style>
+    .sankey {
+      font-family: sans-serif;
+    }
+    .link {
+      fill: none;
+      stroke-opacity: 0.3;
+    }
+    .node rect {
+      stroke: #fff;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Define the dimensions of the diagram
+      const width = 1400;
+      const height = 800;
+  
+      // Define the Sankey layout
+      const sankey = d3.sankey()
+        .nodeId(d => d.name)
+        .nodeWidth(26)
+        .nodePadding(10)
+        .extent([[20, 30], [width - 20, height - 30]]);
+
+      const data = {
+        "nodes": [
+        
+          // META-CATEGORIES
+          
+          { "name": "Physical Models" },
+          { "name": "Philosophical Models" },
+          { "name": "Psychological Models" },
+          { "name": "Sociocultural Models" },
+          { "name": "Mythological and Religious Models" },
+          { "name": "Future Models" },
+          { "name": "Disproven Models"},
+         
+
+          // CATEGORIES
+          
+          // Physical Models
+          { "name": "Classical Physical Models" },
+          { "name": "Relativistic Physical Models" },
+          { "name": "Quantum Physical Models" },
+          { "name": "Cosmological Models" },
+          { "name": "Computational Models"},
+          { "name": "Geometric and Topographical Models"},
+          { "name": "Unified Models"},
+          
+          // Philosophical Models
+          { "name": "Epistemological Models" },
+          { "name": "Eastern Models" },
+
+		      // Psychological Models
+          { "name": "Psychoanalytical Models" },
+          { "name": "Cognitive Models" },
+
+          // Sociocultural Models
+          { "name": "Sociological Models" },
+          { "name": "Anthropological Models" },
+          
+          // Mythological and Religious Models
+          { "name": "Mythological Models" },
+          { "name": "Religious Models" },
+          
+          // Future Models
+          { "name": "Artificially Intelligent Models" },
+
+          // Disproven Models
+          { "name": "Old Disproven Models" },
+
+
+          // SPECIFIC THEORIES
+          
+          // PHYSICAL MODELS
+
+          // Physical Models
+          { "name": "Newtonian Physics (1687)" },
+          { "name": "Special Relativity (1905)" },
+          { "name": "General Relativity (1915)" },
+          { "name": "Copenhagen Interpretation (c. 1920s)" },
+          { "name": "Quantum Mechanics (1925)" },
+          { "name": "De Broglie-Bohm Pilot Wave Theory (1927)" },
+          { "name": "String Theory (1968)" },
+          { "name": "Standard Model of Particle Physics (c. 1970s)" },
+          { "name": "Loop Quantum Gravity (1987)" },
+          { "name": "M Theory (1995)" },
+          { "name": "Penrose-Hameroff Orchestrated Objective Reduction (1996)" },
+
+          // Cosmological Models
+          { "name": "Heliocentric Model (1543)" },
+          { "name": "Big Bang Theory (1927)" },
+          { "name": "Steady State Theory (1948)" },
+          { "name": "Multiverse Theory (1950s)" },
+          { "name": "Many Worlds Interpretation (1957)" },        
+          { "name": "Inflationary Cosmology (1980)" },  
+          
+          // Computational Models
+          { "name": "Cellular Automata (c. 1940s)" },
+          { "name": "Simulation Theory (2003)" },
+          { "name": "Ruliad (2020)" },
+          
+          // Geometric and Topographical Models
+          { "name": "Hopf Fibration (1931)" },
+          { "name": "E8 Lattice (2007)" },
+          { "name": "Cosmological Polytope (2014)" },
+          
+          // Unified Models
+          { "name": "Cognitive-Theoretic Model of the Universe (c. 1980s)" },
+                   
+          // PHILOSOPHICAL MODELS
+
+          // Epistemological Models
+          { "name": "Dualism (1641)" },
+          { "name": "Materialism (c. 17th Century)" },
+          { "name": "Idealism (c. 18th Century)" },
+          { "name": "Phenomenology (1900)" },
+          { "name": "Existentialism (c. 1930)" },
+
+          // Eastern Models
+          { "name": "Vedanta (c. 4th Century)" },
+          { "name": "Confucianism (c. 6th Century)" },
+          { "name": "Taoism (142)" },
+
+          // PSYCHOLOGICAL MODELS
+
+          // Psychological Models
+          { "name": "Freudian Psychoanalysis (c. 1890s)" },
+          { "name": "Jungian Psychology (1902)"},
+          
+          // Cognitive Science Models
+          { "name": "Cognitivism (1956)" },
+          { "name": "Connectionism (1980)" },
+          { "name": "Global Workspace Theory (1980s)" },
+          { "name": "Embodied Cognition (1990s)" },
+          { "name": "Enactivism (1991)" },
+          { "name": "Integrated Information Theory (2004)" },
+          { "name": "User Interface Metaphor (2009)" },
+          
+
+          // SOCIOCULTURAL MODELS
+
+          // Sociological Models
+          { "name": "Symbolic Interactionism (1937)" },
+          { "name": "Social Constructivism (1968)" },
+
+          // Anthropological Models
+          { "name": "Cultural Relativism (1887)" },
+          { "name": "Structuralism (1920s)" },
+          { "name": "Post-structuralism (1960s)" },
+          
+          // MYTHOLOGICAL AND RELIGIOUS MODELS
+
+          // Mythological Models
+          { "name": "Indigenous Cosmologies (pre-history)" },
+          { "name": "Ancient Mythologies (Greek, Roman, Norse, Egyptian, etc.) (c. 2500 BCE)" },
+
+          // Religious Models
+		      { "name": "Animism (pre-history)" },
+          { "name": "Jianism (c. 2500 BCE)" },
+          { "name": "Hinduism (c. 2000 BCE)" },
+          { "name": "Zoroastranism (c. 6th Century BCE)" },
+          { "name": "Judaism (c. 1st Century BCE)" },
+          { "name": "Buddhism (c. 500 BCE)" },
+          { "name": "Christianity (c. 30)" },
+          { "name": "Islam (c. 61)" },
+          { "name": "Baha'i Faith (1844)" },
+          { "name": "Panpsychism (19th Century)" },
+          { "name": "Theosophy (1875)" },
+          { "name": "Anthroposophy (1919)" },
+          
+          // FUTURE MODELS
+
+          { "name": "Brain Computer Interface Assisted AI (2030)" },
+          { "name": "Human Brain Emulation (2030)" },
+          { "name": "Quantum AI (2030)" },
+          { "name": "Artificial General Intelligence (2030)" },
+          
+          // DISPROVEN MODELS
+
+          { "name": "Flat Earth Model (c. 2500 BCE)" },
+          { "name": "Geocentric Model (c. 600 BCE)" }
+
+        ],
+
+        "links": [
+
+          // LINKS BETWEEN META-CATEGORIES AND CATEGORIES
+          { "source": "Physical Models", "target": "Classical Physical Models", "value": 10 },
+          { "source": "Physical Models", "target": "Relativistic Physical Models", "value": 9 },
+          { "source": "Physical Models", "target": "Quantum Physical Models", "value": 8 },
+          { "source": "Physical Models", "target": "Cosmological Models", "value": 7 },
+          { "source": "Physical Models", "target": "Computational Models", "value": 5 },
+          { "source": "Physical Models", "target": "Geometric and Topographical Models", "value": 5 },
+          { "source": "Physical Models", "target": "Unified Models", "value": 3 },
+
+          { "source": "Philosophical Models", "target": "Epistemological Models", "value": 7 },
+          { "source": "Philosophical Models", "target": "Eastern Models", "value": 7 },
+
+          { "source": "Psychological Models", "target": "Psychoanalytical Models", "value": 6 },
+          { "source": "Psychological Models", "target": "Cognitive Models", "value": 6 },
+
+          { "source": "Sociocultural Models", "target": "Sociological Models", "value": 7 },
+          { "source": "Sociocultural Models", "target": "Anthropological Models", "value": 7 },
+
+          { "source": "Mythological and Religious Models", "target": "Mythological Models", "value": 5 },
+          { "source": "Mythological and Religious Models", "target": "Religious Models", "value": 6 },
+
+          { "source": "Future Models", "target": "Artificially Intelligent Models", "value": 8 },
+
+          { "source": "Disproven Models", "target": "Old Disproven Models", "value": 2 },
+
+
+          // LINKS BETWEEN CATEGORIES AND SPECIFIC THEORIES
+
+          // Physical Models
+					{ "source": "Classical Physical Models", "target": "Newtonian Physics (1687)", "value": 10 },
+					{ "source": "Relativistic Physical Models", "target": "Special Relativity (1905)", "value": 9 },
+					{ "source": "Relativistic Physical Models", "target": "General Relativity (1915)", "value": 9 },
+					{ "source": "Quantum Physical Models", "target": "Copenhagen Interpretation (c. 1920s)", "value": 8 },
+					{ "source": "Quantum Physical Models", "target": "Quantum Mechanics (1925)", "value": 10 },
+					{ "source": "Quantum Physical Models", "target": "De Broglie-Bohm Pilot Wave Theory (1927)", "value": 6 },
+					{ "source": "Quantum Physical Models", "target": "String Theory (1968)", "value": 7 },
+					{ "source": "Quantum Physical Models", "target": "Standard Model of Particle Physics (c. 1970s)", "value": 10 },
+					{ "source": "Quantum Physical Models", "target": "Loop Quantum Gravity (1987)", "value": 6 },
+					{ "source": "Quantum Physical Models", "target": "M Theory (1995)", "value": 7 },
+					{ "source": "Quantum Physical Models", "target": "Penrose-Hameroff Orchestrated Objective Reduction (1996)", "value": 5 },
+					{ "source": "Cosmological Models", "target": "Heliocentric Model (1543)", "value": 10 },
+					{ "source": "Cosmological Models", "target": "Big Bang Theory (1927)", "value": 9 },
+					{ "source": "Cosmological Models", "target": "Steady State Theory (1948)", "value": 3 },
+					{ "source": "Cosmological Models", "target": "Multiverse Theory (1950s)", "value": 5 },
+					{ "source": "Cosmological Models", "target": "Many Worlds Interpretation (1957)", "value": 6 },
+					{ "source": "Cosmological Models", "target": "Inflationary Cosmology (1980)", "value": 8 },
+
+          // Computational Models
+          { "source": "Computational Models", "target": "Cellular Automata (c. 1940s)", "value": 7 },
+          { "source": "Computational Models", "target": "Simulation Theory (2003)", "value": 6 },
+          { "source": "Computational Models", "target": "Ruliad (2020)", "value": 3 },
+
+          // Geometric and Topgraphical Models
+          { "source": "Geometric and Topographical Models", "target": "Hopf Fibration (1931)", "value": 5 },
+          { "source": "Geometric and Topographical Models", "target": "E8 Lattice (2007)", "value": 6 },
+          { "source": "Geometric and Topographical Models", "target": "Cosmological Polytope (2014)", "value": 4 },
+
+          // Unified Models
+          { "source": "Unified Models", "target": "Cognitive-Theoretic Model of the Universe (c. 1980s)", "value": 3 },
+
+          // Philosophical Models
+          { "source": "Epistemological Models", "target": "Dualism (1641)", "value": 6 },
+          { "source": "Epistemological Models", "target": "Materialism (c. 17th Century)", "value": 6 },
+          { "source": "Epistemological Models", "target": "Idealism (c. 18th Century)", "value": 6 },
+          { "source": "Epistemological Models", "target": "Phenomenology (1900)", "value": 7 },
+          { "source": "Epistemological Models", "target": "Existentialism (c. 1930)", "value": 7 },
+          { "source": "Eastern Models", "target": "Vedanta (c. 4th Century)", "value": 7 },
+          { "source": "Eastern Models", "target": "Confucianism (c. 6th Century)", "value": 7 },
+          { "source": "Eastern Models", "target": "Taoism (142)", "value": 7 },
+
+					// Psychological Models
+					{ "source": "Psychoanalytical Models", "target": "Freudian Psychoanalysis (c. 1890s)", "value": 6 },
+					{ "source": "Psychoanalytical Models", "target": "Jungian Psychology (1902)", "value": 7 },
+
+          // Cognitive Science Models
+          { "source": "Cognitive Models", "target": "Cognitivism (1956)", "value": 9 },
+          { "source": "Cognitive Models", "target": "Connectionism (1980)", "value": 8 },
+          { "source": "Cognitive Models", "target": "Global Workspace Theory (1980s)", "value": 6 },
+          { "source": "Cognitive Models", "target": "Embodied Cognition (1990s)", "value": 7 },
+          { "source": "Cognitive Models", "target": "Enactivism (1991)", "value": 6 },
+          { "source": "Cognitive Models", "target": "Integrated Information Theory (2004)", "value": 6  },
+          { "source": "Cognitive Models", "target": "User Interface Metaphor (2009)", "value": 6  },
+
+					// Socialogical Models
+					{ "source": "Sociological Models", "target": "Symbolic Interactionism (1937)", "value": 7 },
+					{ "source": "Sociological Models", "target": "Social Constructivism (1968)", "value": 8 },
+
+          // Anthropological Models
+					{ "source": "Anthropological Models", "target": "Cultural Relativism (1887)", "value": 7 },
+					{ "source": "Anthropological Models", "target": "Structuralism (1920s)", "value": 7 },
+					{ "source": "Anthropological Models", "target": "Post-structuralism (1960s)", "value": 7 },
+
+          // Mythological Models
+          { "source": "Mythological Models", "target": "Indigenous Cosmologies (pre-history)", "value": 2 },
+          { "source": "Mythological Models", "target": "Ancient Mythologies (Greek, Roman, Norse, Egyptian, etc.) (c. 2500 BCE)", "value": 2 },
+
+					// Religious Models		
+					{ "source": "Religious Models", "target": "Animism (pre-history)", "value": 5 },
+					{ "source": "Religious Models", "target": "Jianism (c. 2500 BCE)", "value": 5 },
+					{ "source": "Religious Models", "target": "Hinduism (c. 2000 BCE)", "value": 6 },
+					{ "source": "Religious Models", "target": "Zoroastranism (c. 6th Century BCE)", "value": 5 },
+					{ "source": "Religious Models", "target": "Judaism (c. 1st Century BCE)", "value": 6 },
+					{ "source": "Religious Models", "target": "Buddhism (c. 500 BCE)", "value": 7 },
+					{ "source": "Religious Models", "target": "Christianity (c. 30)", "value": 8 },
+					{ "source": "Religious Models", "target": "Islam (c. 61)", "value": 7 },
+					{ "source": "Religious Models", "target": "Baha'i Faith (1844)", "value": 4 },
+					{ "source": "Religious Models", "target": "Panpsychism (19th Century)", "value": 3 },
+					{ "source": "Religious Models", "target": "Theosophy (1875)", "value": 3 },
+					{ "source": "Religious Models", "target": "Anthroposophy (1919)", "value": 4 },
+
+					// Future Models
+					{ "source": "Artificially Intelligent Models", "target": "Brain Computer Interface Assisted AI (2030)", "value": 8 },
+					{ "source": "Artificially Intelligent Models", "target": "Human Brain Emulation (2030)", "value": 7 },
+					{ "source": "Artificially Intelligent Models", "target": "Quantum AI (2030)", "value": 9 },
+					{ "source": "Artificially Intelligent Models", "target": "Artificial General Intelligence (2030)", "value": 10 },
+
+          // Disproven Models
+          { "source": "Old Disproven Models", "target": "Flat Earth Model (c. 2500 BCE)", "value": 1 },
+          { "source": "Old Disproven Models", "target": "Geocentric Model (c. 600 BCE)", "value": 1 }
+			
+				]
+
+}
+
+ // Create the diagram
+ const svg = d3.select("body")
+        .append("svg")
+        .attr("viewBox", [0, 0, width, height])
+        .attr("width", width)
+        .attr("height", height)
+        .attr("class", "sankey");
+
+      const {nodes, links} = sankey(data);
+
+      // Uncomment these lines for debugging
+      // console.log("Nodes: ", nodes);
+      //console.log("Links: ", links);
+
+      // Define a linear scale for link width
+      const linkWidthScale = d3.scaleLinear().domain([1, 30]).range([1, 30]);
+
+      // Create a color scale for links
+      // const linkColorScale = d3.scaleSequential(d3.interpolateRainbow).domain([0, links.length]);
+      const linkColorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
+      // Draw the links
+      svg.append("g")
+        .attr("fill", "none")
+        .attr("stroke", (d, i) => linkColorScale(i))
+        .attr("stroke-opacity", 0.3)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke-width", d => linkWidthScale(d.value)) // Use the linkWidthScale function here
+        .attr("d", d3.sankeyLinkHorizontal())
+        .attr("class", "link");
+
+      // Draw the nodes
+      const node = svg.append("g")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 12)
+        .attr("font-weight", 700)
+        .selectAll("g")
+        .data(nodes)
+        .join("g")
+        .attr("class", "node");
+
+      // Draw the node rectangles
+      node.append("rect")
+        .attr("x", d => d.x0)
+        .attr("y", d => d.y0)
+        .attr("height", d => d.y1 - d.y0)
+        .attr("width", d => d.x1 - d.x0)
+        .attr("fill", d => d3.schemeCategory10[d.name.charCodeAt(0) % 10])
+        .attr("stroke", "#000");
+
+      // Draw the node labels
+      node.append("text")
+        .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+        .attr("y", d => (d.y1 + d.y0) / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+        .text(d => d.name);
+    });
+  </script>
+</body>
+</html>
